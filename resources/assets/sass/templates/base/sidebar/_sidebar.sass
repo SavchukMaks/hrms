@@ -1,0 +1,61 @@
+@import "../../../vars"
+
+#sidebar
+  background-image: linear-gradient(to bottom, #4170af, #00c5eb)
+  min-height: 100%
+  display: flex
+  padding: 20px 15px
+  flex-direction: column
+
+.sidebar-header
+  width: 100%
+  display: flex
+  align-items: stretch
+  margin-bottom: 27px
+
+.sidebar-nav-btn
+  display: flex
+  justify-content: center
+  align-items: center
+  & i
+    color: #FFF
+    font-size: 22px
+  &:hover
+    cursor: pointer
+
+.sidebar-logo
+  & img
+    width: auto
+    height: 22px
+
+.sidebar-nav
+  border-bottom: 1px solid #ffffff
+  display: block
+  padding-bottom: 16px
+  margin-bottom: 16px
+  & ul
+    margin: 0
+    padding-left: 36px
+    & li
+      list-style: none
+      & a.active
+        color: rgba(255,255,255,1)
+        & img
+          opacity: 1
+      & a
+        color: rgba(255,255,255,0.6)
+        font-size: 16px
+        line-height: 26px
+        letter-spacing: 0.3px
+        font-weight: bold
+        padding: 8px 0
+        display: flex
+        align-items: center
+        & img
+          margin-right: 23px
+          opacity: 0.6
+        &:hover
+          text-decoration: none
+          color: rgba(255,255,255,1)
+          & img
+            opacity: 1

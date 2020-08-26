@@ -1,0 +1,1 @@
+showPopup($('.send-message'), $('#send-message-popup'))

@@ -1,0 +1,60 @@
+@import "../../vars"
+@import "../base/sidebar/sidebar"
+@import "../base/sidebar/sidebar-filters"
+@import "../candidate/candidate-sidebar"
+@import "../base/main/main"
+
+.header-page
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 20px
+  margin-bottom: 20px
+  padding: 0 15px
+  & .btns
+    & a
+      color: $greyish
+      margin-right: 15px
+  & .time
+    & span
+      font-family: $medium
+      font-size: 16px
+      color: #7e807f
+
+.new-message
+  width: 100%
+  & .to
+    background-color: #dbe4ef
+    padding: 0 48px
+    display: inline-block
+    width: 100%
+    & span
+      font-family: $medium
+      color: #7e807f
+      font-size: 14px
+      margin-right:  24px
+    & a
+      color: $warm-grey
+      font-size: 12px
+  & .new-content
+    padding: 12px 48px 0
+    & textarea
+      border: none
+      resize: none
+      color: $warm-grey
+      font-size: 12px
+  & .btns
+    width: 100%
+    display: inline-block
+    padding: 13px 110px 13px 36px
+    border-bottom: solid 1px #e8e8e8
+    border-top: solid 1px #e8e8e8
+    & button
+      margin-right: 30px
+      &.fa-paperclip
+        border: none
+        background: transparent
+        box-shadow: none
+        font-size: 22px
+        line-height: 1
+        color: $greyish

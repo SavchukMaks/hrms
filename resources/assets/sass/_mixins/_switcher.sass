@@ -1,0 +1,79 @@
+
+/* HTML for using
+ <div class="onoffswitch">
+  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+  <label class="onoffswitch-label" for="myonoffswitch">
+  <span class="onoffswitch-inner"></span>
+  <span class="onoffswitch-switch"></span>
+  </label>
+  </div>
+//
+
+.onoffswitch
+  position: relative
+  width: 45px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+.onoffswitch-checkbox
+  display: none
+
+.onoffswitch-label
+  display: block
+  overflow: hidden
+  cursor: pointer
+  border: 2px solid #B9B9B9
+  border-radius: 16px
+
+.onoffswitch-inner
+  display: block
+  width: 200%
+  margin-left: -100%
+  transition: margin 0.3s ease-in 0s
+  &:before, &:after
+    display: block
+    float: left
+    width: 50%
+    height: 22px
+    padding: 0
+    line-height: 22px
+    font-size: 16px
+    color: white
+    font-family: Trebuchet, Arial, sans-serif
+    font-weight: bold
+    box-sizing: border-box
+  &:before
+    content: ""
+    padding-left: 10px
+    background-color: #FCFCFC
+    color: #C21D1D
+  &:after
+    content: ""
+    padding-right: 10px
+    background-color: #FCFCFC
+    color: #666666
+    text-align: right
+
+.onoffswitch-switch
+  display: block
+  width: 16px
+  margin: 5px
+  background: #B9B9B9
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 19px
+  border: 2px solid #B9B9B9
+  border-radius: 16px
+  transition: all 0.3s ease-in 0s
+
+.onoffswitch-checkbox:checked
+  + .onoffswitch-label
+    border: 2px solid #55CDA1
+    .onoffswitch-inner
+      margin-left: 0
+    .onoffswitch-switch
+      right: 0px
+      background-color: #55CDA1
+      border: 2px solid #55CDA1

@@ -1,0 +1,289 @@
+@import "../../../vars"
+@import "main-header"
+@import "../../../_mixins/placeholder"
+
+main.col-md-9
+  padding-left: 29px
+  padding-top: 15px
+  padding-right: 0
+  min-height: 100%
+  height: 1px
+  overflow: auto
+  
+.main-content
+  background-color: #fff
+  width: 100%
+  float: left
+  min-height: calc(100% - 48px)
+  display: inline-block
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
+  //box-shadow: -10px -10px 10px 0px rgba(0,0,0,0.1)
+
+.input-dropdown
+  display: inline-block
+  width: 100%
+  position: relative
+  & input
+    position: relative
+  &:after
+    content: '\f107'
+    position: absolute
+    right: 10px
+    top: 1px
+    font-family: FontAwesome
+
+.autocomplete-list
+  display: none
+  width: 100%
+  border-radius: 15px
+  background-color: #ffffff
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25)
+  border: solid 1px $steel
+  overflow: hidden
+  position: absolute
+  z-index: 2
+  top: 33px
+  left: 0
+  & ul
+    margin: 0
+    padding: 0
+    & li
+      list-style: none
+      font-size: 12px
+      line-height: 2
+      padding: 5px 10px
+      letter-spacing: 0.2px
+      font-weight: 600
+      text-align: left
+      color: $steel
+      border-bottom: 1px solid $steel
+      &:hover
+        background-color: #f5f5f5
+        cursor: pointer
+      &:last-of-type
+        border-bottom: none
+
+.form-btns
+  & ul
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: space-around
+    & li
+      list-style: none
+      display: inline-block
+      & a
+        display: inline-block
+.save-btn
+  background-color: $seafoam-blue
+  border-radius: 20px
+  color: #FFF
+  font-size: 14px
+  line-height: 24px
+  padding: 5px 50px
+  font-weight: bold
+  border: none
+  &:hover
+    color: #FFF
+    text-decoration: none
+    box-shadow: 0px 6px 10px 0 $seafoam-blue-30
+.back-btn
+  width: 100%
+  display: block
+  padding: 5px 0
+  text-align: center
+  border-radius: 20px
+  background-color: $steel
+  font-size: 14px
+  font-weight: bold
+  line-height: 1.71
+  letter-spacing: 0.3px
+  color: #ffffff
+  &:hover
+    text-decoration: none
+    box-shadow: 0 0 8px 0 rgba(37, 110, 138, 0.35)
+
+.reset-btn
+  border: 1px solid $steel
+  border-radius: 20px
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1)
+  font-weight: bold
+  font-size: 14px
+  line-height: 24px
+  color: #8c8c8c
+  background-color: #fff
+  padding: 4px 50px
+  &:hover
+    background-color: #8c8c8c
+    color: #FFF
+
+.create-btn
+  background-color: #fff
+  border: 1px dashed $seafoam-blue
+  color: $seafoam-blue
+  border-radius: 20px
+  padding: 5px 50px
+  font-size: 14px
+  line-height: 24px
+  font-weight: bold
+  &:hover
+    border: 1px solid $seafoam-blue
+    color: $seafoam-blue
+    text-decoration: none
+
+.delete-btn
+  border: 1px solid #ff0000
+  color: #ff0000
+  padding: 7px 10px
+  border-radius: 11.5px
+  line-height: 1
+  font-size: 12px
+  &:hover
+    background-color: #ff0000
+    color: #FFF
+    text-decoration: none
+
+.delete-btn-wrapper
+  position: relative
+
+span.sure-delete
+  display: none
+  position: absolute
+  background-color: #FFF
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1)
+  border: solid 1px #e8e8e8
+  padding: 15px 20px
+  width: 160px
+  left: -60px
+  bottom: -110px
+  font-size: 12px
+  line-height: 1.6
+  color: #4d4d4d
+  text-transform: capitalize
+  text-align: center
+  & span
+    display: block
+  & p
+    display: inline-block
+    margin-bottom: 0
+    margin-top: 19px
+    text-transform: uppercase
+    &:first-of-type
+      margin-right: 23px
+      color: #ff0000
+    &:hover
+      cursor: pointer
+
+.sure-delete b
+  color: #ff0000
+
+
+/*----- Tags input ----*/
+
+span.twitter-typeahead
+  width: 100%
+
+.bootstrap-tagsinput
+  width: 100%
+  border: none
+  box-shadow: none
+  padding: 0
+  & input
+    margin-bottom: 18px
+  & .tag
+    margin-right: 16px
+    margin-bottom: 5px
+    display: inline-block
+    padding: 5px 10px
+    color: #8c8c8c
+    font-size: 12px
+    font-weight: 100
+    background-color: #f2f2f2
+    & [data-role=remove]
+      font-size: 16px
+
+/*----- Select -----*/
+
+.select-hidden
+  display: none
+  visibility: hidden
+  padding-right: 10px
+
+.select
+  border-radius: 15px
+  background-color: #ffffff
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1)
+  border: solid 1px $steel
+  width: 100%
+  font-size: 12px
+  padding: 0 10px
+  height: 30px
+  line-height: 2
+  letter-spacing: 0.2px
+  text-align: left
+  color: $warm-grey
+  @include placeholder
+    font-size: 12px
+    line-height: 2
+    letter-spacing: 0.2px
+    text-align: left
+    color: $warm-grey
+  &:focus
+    box-shadow: 0 0 8px 0 rgba(37, 110, 138, 0.35)
+
+.select-styled
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: calc(100% - 30px)
+  margin: 0 auto
+  padding: 3px 10px
+  border-radius: 15px
+  border: 1px solid $steel
+  background-color: #ffffff
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1)
+  &:after
+    content: ""
+    width: 0
+    height: 0
+    position: absolute
+    top: 16px
+    right: 10px
+  &:hover
+    background-color: #FFF
+  &:active, &.active
+    background-color: #FFF
+  &:active:after, &.active:after
+    top: 9px
+    border-color: transparent transparent #fff transparent
+
+.select-options
+  display: none
+  position: absolute
+  top: 100%
+  right: 0
+  left: 0
+  z-index: 999
+  margin: 0
+  padding: 0
+  list-style: none
+  background-color: #FFF
+  border: 1px solid $steel
+  border-radius: 15px
+  margin-top: 3px
+  overflow: hidden
+  li
+    margin: 0
+    padding: 5px 18px
+    font-size: 12px
+    line-height: 24px
+    border-bottom: 1px solid $steel
+
+    &:last-of-type
+      border-bottom: 0
+    &:hover
+      background-color: #f5f5f5
+    &[rel="hide"]
+      display: none

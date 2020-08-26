@@ -1,0 +1,58 @@
+.candidate-exp-info
+  padding: 20px 30px
+  & .item
+    width: 450px
+    padding: 15px
+    border: 1px solid #e8e8e8
+    position: relative
+    margin: 0 auto 30px
+    &:last-of-type
+      margin-bottom: 20px
+      &:after
+        display: none
+    &:after
+      content: '\f107'
+      font-family: FontAwesome
+      font-size: 22px
+      position: absolute
+      line-height: 1
+      right: 50%
+      bottom: -26px
+      transform: translateX(-50%)
+    &.hidden
+      display: none
+    & .title
+      & p
+        font-size: 18px
+        line-height: 1
+        margin-bottom: 5px
+    & .position
+      & p
+        color: #000
+        font-family: $medium
+        line-height: 1
+        font-size: 20px
+        margin-bottom: 10px
+    & .time
+      display: flex
+      flex-wrap: wrap
+      & *
+        display: inline-block
+        float: left
+      & p
+        margin-bottom: 0
+      & i
+        margin: 0 10px
+      & span
+        color: #909090
+        margin-left: 5px
+  & span.more
+    padding: 5px 0
+    width: 450px
+    margin: 0 auto
+    display: block
+    color: #FFF
+    background-color: #387DB8
+    text-align: center
+    &:hover
+      cursor: pointer

@@ -1,0 +1,2 @@
+showPopup($(".send-message"),$("#send-message-popup"));
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNhbmRpZGF0ZS1saXN0LmpzIl0sIm5hbWVzIjpbInNob3dQb3B1cCIsIiQiXSwibWFwcGluZ3MiOiJBQUFBQSxVQUFVQyxFQUFFLGlCQUFrQkEsRUFBRSIsImZpbGUiOiJjYW5kaWRhdGUtbGlzdC5qcyIsInNvdXJjZXNDb250ZW50IjpbInNob3dQb3B1cCgkKCcuc2VuZC1tZXNzYWdlJyksICQoJyNzZW5kLW1lc3NhZ2UtcG9wdXAnKSkiXX0=

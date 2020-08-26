@@ -1,0 +1,68 @@
+@import "../../vars"
+@import "../base/sidebar/sidebar"
+@import "../base/sidebar/sidebar-filters"
+@import "../candidate/candidate-sidebar"
+@import "../base/main/main"
+@import "../../_mixins/placeholder"
+
+.candidate-sidebar
+  border-bottom: none
+
+.title
+  width: 100%
+  padding: 18px 68px 15px 39px
+  border-bottom: solid 1px #e8e8e8
+  display: flex
+  justify-content: space-between
+  align-items: center
+  & h1
+    margin: 0
+    font-size: 18px
+    font-family: $medium
+    color: #000
+
+.time
+  & span
+    margin-right: 25px
+    font-family: $medium
+    font-size: 16px
+    color: #7e807f
+    &.active
+      color: $seafoam-blue
+    &:hover
+      cursor: pointer
+
+.box
+  width: 100%
+  display: inline-block
+  padding: 23px 40px 27px
+  border-bottom: solid 1px #e8e8e8
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1)
+
+.list
+  & p
+    font-family: $medium
+    font-size: 18px
+    color: #000
+  & ul
+    margin: 0
+    padding: 0
+    & li
+      list-style: none
+      & span
+        font-family: $medium
+        font-size: 16px
+        line-height: 30px
+        color: #909090
+
+.download
+  margin-top: 21px
+  margin-left: 39px
+  & a
+    font-family: $medium
+    font-size: 18px
+    color: $seafoam-blue
+    & i
+      margin-left: 15px
+      color: #000
+      font-size: 18px

@@ -1,0 +1,545 @@
+@import "../../vars"
+@import "../base/sidebar/sidebar"
+@import "../base/sidebar/sidebar-filters"
+@import "../candidate/candidate-sidebar"
+@import "../base/main/main"
+@import "../../_mixins/placeholder"
+
+.content-wrapper
+  width: 1030px
+  display: block
+  margin: 0 auto
+
+.calendar-panel
+  padding: 25px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  & .year
+    position: relative
+    width: 50px
+    & p
+      font-weight: bold
+      font-size: 14px
+      color: #494949
+      position: relative
+      display: inline-block
+      padding-right: 15px
+      margin-bottom: 0
+      &:after
+        content: '\f107'
+        font: normal normal normal 14px/1 FontAwesome
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+      &:hover
+        cursor: pointer
+    & .list
+      display: none
+      z-index: 2
+      position: absolute
+      top: 26px
+      left: -10px
+      padding: 5px 10px
+      border: 1px solid #e8e8e8
+      background-color: #FFF
+      > ul
+        padding: 0
+        margin: 0
+        & li
+          list-style: none
+          &:hover
+            cursor: pointer
+            color: #4170af
+  & .months
+    width: calc(100% - 50px)
+    position: relative
+    & .left-arrow, & .right-arrow
+      position: absolute
+      left: 0
+      width: 30px
+      text-align: center
+      top: 50%
+      transform: translateY(-50%)
+      display: flex
+      align-items: center
+      justify-content: center
+      & i
+        font-size: 22px
+      &:hover
+        cursor: pointer
+        & i
+          color: #4aca9b
+      &:after
+        content: ''
+        position: absolute
+        right: -50px
+        width: 50px
+        height: 22px
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+      &.hide
+        display: none
+    & .right-arrow
+      left: inherit
+      right: 0
+      &:after
+        right: inherit
+        left: -50px
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+    & .months-wrapper
+      width: calc(100% - 60px)
+      margin: 0 auto
+      display: block
+      overflow: hidden
+      > ul
+        padding: 0
+        margin: 0
+        width: 1260px
+        & li
+          list-style: none
+          display: inline-block
+          padding: 0 20px
+          max-width: 100px
+          min-width: 100px
+          text-align: center
+          &:hover
+            cursor: pointer
+            & span
+              font-weight: bold
+          & span
+            font-family: $medium
+            font-size: 12px
+            letter-spacing: 2.4px
+            color: #494949
+          &.active
+            & span
+              font-weight: bold
+          &.choose
+            border: solid 1px #e8e8e8
+            border-bottom: none
+            box-shadow: 0px 5px 18px 0 rgba(0, 0, 0, 0.1)
+
+
+.calendar
+  border: solid 1px #e8e8e8
+  & .header-calendar
+    padding: 10px 0
+    display: flex
+    border-bottom: solid 1px #e8e8e8
+    > div
+      display: flex
+      text-align: left
+      padding-left: 30px
+      & span
+        font-family: $medium
+        font-size: 12px
+        color: #494949
+        line-height: 1
+    & .month
+      width: 230px
+      & span
+        text-transform: uppercase
+    & .candidate
+      width: 530px
+    & .interviewer
+      width: 270px
+      text-align: center
+      padding-left: 0
+      justify-content: center
+
+.calendar-content
+  & ul
+    padding: 0
+    margin: 0
+    & li
+      list-style: none
+      display: flex
+      border-bottom: solid 1px #e8e8e8
+      &:last-child
+        border-bottom: none
+      > div
+        border-right: solid 1px #e8e8e8
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+      & .date
+        text-align: center
+        width: 80px
+        padding: 10px 0
+        & p
+          font-family: $medium
+          font-size: 11px
+          color: #a2a2a2
+        & span
+          text-align: center
+          font-weight: bold
+          font-size: 36px
+          color: #494949
+          letter-spacing: 0.7px
+          line-height: 1
+      & .time
+        width: 150px
+        & span
+          position: relative
+          font-family: $medium
+          font-size: 12px
+          letter-spacing: 0.2px
+          color: #494949
+          padding-left: 16px
+          &:before
+            content: ''
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            background-color: #4aca9b
+            width: 8px
+            height: 8px
+            border-radius: 50%
+      & .candidate
+        width: 530px
+        align-items: flex-start
+        padding-left: 30px
+        & p
+          font-family: $medium
+          font-size: 16px
+          letter-spacing: 0.3px
+          color: #7e807f
+          line-height: 1
+          margin-bottom: 9px
+        & span
+          font-family: $medium
+          font-size: 18px
+          letter-spacing: 0.3px
+          color: $steel
+          line-height: 1
+      & .interviewer
+        width: 270px
+        flex-direction: row
+        align-items: center
+        justify-content: baseline
+        padding-left: 30px
+        border-right: none
+        & .photo
+          overflow: hidden
+          margin-right: 21px
+          & img
+            width: 38px
+            height: 38px
+            border-radius: 50%
+        & .info
+          display: flex
+          flex-direction: column
+          & p
+            font-family: $medium
+            font-size: 16px
+            letter-spacing: 0.3px
+            color: $steel
+            line-height: 1
+            margin-bottom: 11px
+          & a
+            text-decoration: none
+            font-size: 12px
+            line-height: 1
+            letter-spacing: 0.2px
+            color: #777777
+
+#create-interview
+  & .interviewer, & .candidate
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 35px 30px
+    border: solid 1px #e8e8e8
+    border-bottom: none
+    > div
+      display: flex
+    > span
+      font-family: $semi
+      font-size: 16px
+      color: #494949
+    & .time
+      & span
+        margin: 0 15px
+    & .inputs-block
+      & input
+        margin-right: 10px
+        &:last-child
+          margin-right: 0
+  & .candidate
+    & .vacancy
+      & select
+        width: 340px
+        border-radius: 15px
+        background-color: #ffffff
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1)
+        border: solid 1px $steel
+
+
+.days
+  position: absolute
+  top: 28px
+  left: 0
+  width: 240px
+  flex-wrap: wrap
+  background-color: #ffffff
+  box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.1)
+  border: solid 1px #e8e8e8
+  border-top: none
+  display: none
+  &.visible
+    display: flex
+  &:before
+    content: ''
+    width: calc(100% - 100px)
+    height: 1px
+    background-color: #e8e8e8
+    top: 0
+    left: 0
+    position: absolute
+  & ul
+    margin: 0
+    padding: 20px 15px
+    & li
+      display: flex
+      flex-wrap: wrap
+      & span
+        padding: 0 5px
+        font-size: 12px
+        color: #494949
+        height: 23px
+        &:hover
+          font-weight: bold
+          border-bottom: 2px solid #55cda1
+          cursor: pointer
+          height: 21px
+
+.candidate-type-list-item
+  margin-top: 10px
+  padding: 20px
+  border-radius: 0
+  background-color: white
+  position: relative
+  overflow: hidden
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1)
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  margin-bottom: 10px
+.candidate-list-item
+  padding: 20px
+  border-radius: 0
+  background-color: white
+  position: relative
+  overflow: hidden
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1)
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  margin-bottom: 30px
+  min-height: 170px
+  &:hover
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1)
+
+h2
+  font-family: sfuidisplay-medium,sans-serif
+  font-size: 18px
+  color: #919292
+
+
+//.form-control
+//  margin-top: 17px
+//  margin-bottom: 25px
+//.candidate-list-item
+//  height: 165px
+//.save-btn
+//  margin-bottom: 7px
+//  margin-left: 19px
+//#delete-item
+//  margin-left: 56px
+
+.new-categories
+  float: left
+  margin-right: 70px
+
+.candidate-list-about
+  display: inline-block
+  > img
+    border-radius: 50%
+    border: solid 1px #4d4d4d
+    width: 76px
+    margin-right: 24px
+    display: inline-block
+    float: left
+    z-index: 10
+    position: relative
+    left: 45px
+    top: 25px
+  & .about-main
+    display: inline-block
+    padding: 5px 30px
+    & h2
+      font-size: 30px
+      letter-spacing: 0.6px
+      margin: 0 20px 0 0
+      color: #000000
+      display: inline-block
+    & span
+      font-size: 16px
+      display: inline-block
+      letter-spacing: 0.3px
+      color: #000000
+  & .about-location
+    padding: 5px 5px
+    display: block
+    margin: 0 5px
+    & div
+      display: inline-block
+      font-size: 16px
+      letter-spacing: 0.3px
+      color: #000000
+      margin-right: 24px
+      margin-bottom: 0
+      padding: 5px 25px
+      & span
+        font-size: 14px
+      &:last-child
+        margin-right: 0
+  & .about-position
+    display: inline-block
+    position: relative
+    left: 100px
+    top: 20px
+    & h6
+      overflow: hidden
+      background-color: transparent
+      color: #337ab7
+      border: 1px solid #337ab7
+      font-size: 14px
+      padding: 5px
+      border-radius: 2px
+      margin-right: 5px
+      margin-bottom: 20px
+      cursor: pointer
+      -webkit-transition: all 0.3s ease 0s
+      -moz-transition: all 0.3s ease 0s
+      -o-transition: all 0.3s ease 0s
+      transition: all 0.3s ease 0s
+    & h6:hover
+      color: #ffffff
+      background-color: #337ab7
+  & .candidate_location
+    margin: 0 20px
+    padding: 0 30px
+.right-side
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  height: 90px
+  justify-content: space-between
+  & .last-online
+    & p
+      color: $warm-grey
+      font-size: 12px
+      line-height: 12px
+      & span
+        margin-left: 15px
+
+.candidate-list-buttons
+  & ul
+    padding: 0
+    margin: 0
+    & li
+      list-style: none
+      display: inline-block
+      margin-right: 13px
+      &:last-child
+        margin-right: 0
+      & .save-btn
+        padding: 7px 11px 7px 14px
+        font-size: 12px
+        font-weight: 100
+        line-height: 12px
+      > a
+        color: #7e807f
+        font-size: 12px
+        line-height: 12px
+        text-transform: uppercase
+        & img
+          margin-right: 5px
+      & .grey-btn
+        border-radius: 11.5px
+        background-color: #ffffff
+        border: solid 1px #e8e8e8
+        font-size: 12px
+        text-transform: uppercase
+        line-height: 12px
+        padding: 7px 9px 7px 10px
+        font-weight: 500
+        letter-spacing: 0.2px
+        text-align: left
+        color: #7e807f
+      > span
+        padding: 0 5px
+        background-color: #fff
+        & ul
+          display: none
+          margin: 0
+          padding: 0
+          width: 180px
+          position: absolute
+          background-color: #fff
+          border: 1px solid #e8e8e8
+          border-top: none
+          right: 0
+          box-shadow: 0px 5px 18px 0 rgba(0, 0, 0, 0.1)
+          & li
+            list-style: none
+            & a
+              display: block
+              font-size: 12px
+              color: $steel
+              text-transform: uppercase
+              padding: 9px 15px
+              line-height: 12px
+          &:before
+            content: ''
+            width: calc(100% - 26px)
+            height: 1px
+            background-color: #e8e8e8
+            top: 0
+            position: absolute
+            left: 0
+        &:hover
+          cursor: pointer
+          padding: 0 4px
+          background-color: #fff
+          border: 1px solid #e8e8e8
+          border-bottom: none
+          & ul
+            display: block
+            right: -1px
+        &:first-of-type
+          &:hover
+            border: none
+
+.list-image
+  height: 76px
+
+.year
+  & select
+    font-size: 13px
+    margin-bottom: 0
+    margin-left: 5px
+    background: transparent
+    width: auto
+    padding: 5px
+    border: 1px solid #ccc
+    height: 34px
+
+.sort-interview li label
+  cursor: pointer
+  &:hover
+    cursor: pointer

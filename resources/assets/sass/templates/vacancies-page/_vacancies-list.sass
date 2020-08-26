@@ -1,0 +1,229 @@
+@import "../../vars"
+
+.vacancies-list-item
+  border-top: solid 1px #e8e8e8
+  border-bottom: solid 1px #e8e8e8
+  margin-bottom: 30px
+  &:hover
+    box-shadow: 0 0 43px 0 rgba(0, 0, 0, 0.1)
+.categories-btn
+  float: left
+  margin-right: 70px
+.owl-carousel, .owl-stage-outer
+  border-bottom: 1px solid #e8e8e8
+  border-radius: 10px
+  height: 100px
+  width: 600px
+  background-color: white
+
+.about-main
+  margin-bottom: 50px
+.owlCauruseleBlock li
+  list-style-type: none
+  padding-top: 3px
+  letter-spacing: 1px
+  color: #7e807f
+
+.owlCauruseleBlock p
+  margin-top: 7px
+  color: #999
+.owlCauruseleBlock
+  line-height: 19px
+  font-size: 16px
+  padding-top: 15px
+  padding-left: 5px
+  color: #7e807f
+.owl-stage
+  padding-left: 29px
+
+.owl-carousel, .owl-theme, .owl-loaded
+  position: relative
+  margin-bottom: 48px
+  float: left
+
+.owl-carousel, .owl-theme, .owl-loaded first
+  margin-left: 32.6%
+
+.vacancies-item-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0 25px 0 15px
+  border-bottom: 1px solid #e8e8e8
+
+.vacancies-title
+  display: inline-block
+  & h3, span, p
+    display: inline-block
+  & h3
+    font-weight: 100
+    font-size: 18px
+    margin: 10px 0
+  & span, p
+    font-weight: 100
+    font-size: 14px
+    color: #7e807f
+    margin-left: 12px
+    margin-right: 19px
+  & p
+    margin-left: 0
+
+.vacancies-item-btn
+  display: inline-block
+  > a
+    padding: 3px 30px
+    border: 1px solid #e8e8e8
+    border-radius: 15px
+    color: #7e807f
+    font-size: 12px
+    letter-spacing: 0.2px
+    text-transform: uppercase
+    margin-right: 13px
+    &:hover, &:focus
+      background-color: $steel
+      color: #e8e8e8
+      text-decoration: none
+      border: 1px solid #7a839a
+    & i
+      margin-left: 5px
+  & span
+    padding: 0 5px
+    display: inline-block
+    position: relative
+    background-color: #fff
+    & ul
+      display: none
+      margin: 0
+      padding: 0
+      width: 180px
+      position: absolute
+      background-color: #fff
+      border: 1px solid #e8e8e8
+      border-top: none
+      right: 0
+      box-shadow: 0px 5px 18px 0 rgba(0, 0, 0, 0.1)
+      & li
+        list-style: none
+        & a
+          display: block
+          font-size: 12px
+          color: $steel
+          text-transform: uppercase
+          padding: 9px 15px
+          line-height: 12px
+      &:before
+        content: ''
+        width: calc(100% - 26px)
+        height: 1px
+        background-color: #e8e8e8
+        top: 0
+        position: absolute
+        left: 0
+    &:hover
+      cursor: pointer
+      padding: 0 4px
+      background-color: #fff
+      border: 1px solid #e8e8e8
+      border-bottom: none
+      & ul
+        display: block
+        right: -1px
+        bottom: -120px
+
+.vacancies-item-details
+  border-bottom: 1px solid #e8e8e8
+  display: flex
+
+.item-details-block
+  float: left
+  border-right: 1px solid #e8e8e8
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 15px
+  &:last-child
+    border-right: none
+  & span
+    font-size: 24px
+    color: #7e807f
+    line-height: 24px
+  & p
+    font-size: 16px
+    color: #7e807f
+    margin: 4px 0 0
+  &.steel
+    & span, p
+      color: $steel
+  &.green
+    & span, p
+      color: #01bc8e
+
+.vacancies-item-footer
+  display: flex
+  justify-content: space-between
+  padding: 10px 15px
+  align-items: center
+
+.vacancies-item-status
+  font-size: 14px
+  color: #7e807f
+  line-height: 14px
+  & i
+    color: #29c196
+    margin-right: 14px
+
+.vacancies-item-date
+  & p
+    margin: 0
+    font-size: 12px
+    line-height: 12px
+    color: #7e807f
+.sort
+  margin: 10px 10px 0 10px
+.sort-category,
+.sort-type-candidate
+  & select
+    font-size: 13px
+    margin-bottom: 10px
+    margin-left: 5px
+    background: transparent
+    width: 140px
+    padding: 5px
+    border: 1px solid #ccc
+    height: 34px
+
+.sort-tags
+  & input
+    margin-left: 5px
+    font-size: 13px
+    margin-bottom: 10px
+    background: transparent
+    width: 140px
+    padding: 5px
+    border: 1px solid #ccc
+    height: 34px
+#h-search
+  position: relative
+  max-width: 224px
+  float: right
+
+#h-search input[type="text"]:focus
+  border: 2px solid #63b4f4
+  background-color: #fef9fa
+
+#h-search input[type="text"]
+  height: 45px
+  width: 100%
+  padding: 0 50px 0 20px
+  font-size: 14px
+  color: #78828C
+  border: 1px solid #DDDDDD
+
+#h-search input[type="submit"]
+  position: absolute
+  top: 0
+  right: 0
+  width: 45px
+  border: none
+  background: transparent url(../../../../../img/icons/h-search.png) no-repeat center

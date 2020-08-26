@@ -1,0 +1,1 @@
+//= editCandidateManager.js

@@ -1,0 +1,37 @@
+@import "../../vars"
+
+header
+  padding: 10px 0
+  & .row
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  & .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .row:after, .row:before
+    display: none
+
+.header-logo
+  display: flex
+  justify-content: center
+  & a
+    display: flex
+    & img
+      width: auto
+      height: 22px
+      margin: 0 auto
+
+.header-nav
+  display: flex
+  justify-content: center
+  & a
+    color: $steel
+    font-weight: bold
+    font-size: 14px
+    line-height: 14px
+    letter-spacing: 0.3px
+    padding: 8px 20px
+    border: 1px solid $steel
+    border-radius: 22px
+    background-color: #fff
+    &:hover
+      text-decoration: none
+      box-shadow: 0px 5px 10px 0 rgba(122, 131, 154, 0.3)

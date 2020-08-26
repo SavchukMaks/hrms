@@ -1,0 +1,41 @@
+@import "../../vars"
+
+.pagination-wrapper
+  display: flex
+  justify-content: center
+
+.pagination
+  display: inline-block
+  margin-bottom: 24px
+  > a
+    font-family: $semi
+    font-size: 14px
+    line-height: 21px
+    color: #434343
+    &:first-child
+      margin-right: 50px
+    &:last-child
+      margin-left: 50px
+  & ul
+    margin: 0
+    padding: 0
+    display: inline-block
+    & li
+      list-style: none
+      display: inline-block
+      &:first-child
+        margin-right: 40px
+        color: #434343
+      &:last-child
+        margin-left: 40px
+        color: #434343
+      & a
+        font-family: $semi
+        font-size: 14px
+        line-height: 21px
+        color: $warm-grey
+        padding: 0 15px
+        margin: 0 20px
+      & a.active-page
+        color: #434343
+        font-size: 16px

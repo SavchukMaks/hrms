@@ -1,0 +1,110 @@
+@import "../../vars"
+@import "../base/sidebar/sidebar"
+@import "../base/sidebar/sidebar-filters"
+@import "../candidate/candidate-sidebar"
+@import "../base/main/main"
+@import "../../_mixins/placeholder"
+@import "../../_mixins/switcher"
+
+.candidate-sidebar
+  border-bottom: none
+
+.row
+  margin: 0
+
+.title
+  width: 100%
+  padding: 18px 39px 15px
+  border-bottom: solid 1px #e8e8e8
+  & h1
+    margin: 0
+    font-size: 18px
+    font-family: $medium
+    color: #000
+
+.description
+  margin-left: 39px
+  margin-top: 23px
+  & span
+    font-family: $medium
+    font-size: 18px
+    color: #000
+  & p
+    font-family: $medium
+    font-size: 16px
+    color: #909090
+
+.billing-type
+  margin-top: 54px
+  > p
+    display: inline-block
+    font-family: $medium
+    font-size: 16px
+    color: #909090
+    float: left
+    margin: 0 33px 0 0
+
+.switcher
+  display: inline-block
+  > p
+    display: inline-block
+    float: left
+  > div
+    display: block
+    float: left
+    height: 26px
+    margin: 0 15px
+
+.plan
+  & button
+    width: 224px
+    display: block
+    margin: 0 auto
+  &.current
+    & .name-n-price
+      & p, span, small
+        color: $steel
+
+.name-n-price
+  border-radius: 15px
+  background-color: #ffffff
+  box-shadow: 0 0 10px 0 rgba(113, 113, 113, 0.35)
+  text-align: center
+  padding: 20px 0
+  margin-bottom: 40px
+  & p
+    font-weight: bold
+    font-size: 18px
+    line-height: 24px
+    color: $seafoam-blue
+    text-transform: uppercase
+  & .price
+    margin-top: 25px
+    margin-bottom: 15px
+    & p
+      font-weight: bold
+      font-size: 30px
+      line-height: 24px
+      color: $seafoam-blue
+      & span
+        font-size: 48px
+      & small
+        font-size: 16px
+  & span
+    font-family: $medium
+    font-size: 14px
+    line-height: 24px
+    color: $seafoam-blue
+
+.details
+  padding-left: 35px
+  margin-bottom: 25px
+  & ul
+    margin: 0
+    padding: 0
+    & li
+      list-style: none
+      & span
+        font-size: 16px
+        line-height: 24px
+        color: $steel

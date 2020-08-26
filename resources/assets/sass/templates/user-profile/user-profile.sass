@@ -1,0 +1,68 @@
+@import "../../vars"
+@import "../base/sidebar/sidebar"
+@import "../base/sidebar/sidebar-filters"
+@import "../candidate/candidate-sidebar"
+@import "../base/main/main"
+@import "../../_mixins/placeholder"
+
+.candidate-sidebar
+  border-bottom: none
+
+.title
+  width: 100%
+  padding: 18px 39px 15px
+  border-bottom: solid 1px #e8e8e8
+  & h1
+    margin: 0
+    font-size: 18px
+    font-family: $medium
+    color: #000
+
+.box
+  width: 100%
+  display: inline-block
+  padding: 32px 40px 45px
+  border-bottom: solid 1px #e8e8e8
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1)
+  margin-bottom: 44px
+  .row
+    margin-bottom: 27px
+
+.inputs
+  & p
+    font-family: $medium
+    font-size: 18px
+    color: #000
+    margin-top: 0
+    margin-bottom: 10px
+  & textarea
+    border-radius: 15px
+    background-color: #ffffff
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1)
+    border: solid 1px $steel
+    width: 100%
+    resize: none
+    padding: 9px 11px
+    @include placeholder
+      font-size: 12px
+      line-height: 24px
+      color: $warm-grey
+
+.balance
+  & span
+    font-family: $medium
+    font-size: 48px
+    color: #656565
+    line-height: 1
+
+.control-group
+  width: 100%
+
+.editable-input
+  display: inline-block
+  margin-right: 5px
+
+.editable-buttons
+  display: inline-block
+  position: absolute
+

@@ -1,0 +1,19 @@
+@import "../../vars"
+@import "../login-page/login-form"
+
+#invalid-confim-pass, #invalid-company-name, #recruiter-last-name, #recruiter-first-name
+  display: none
+
+.registration-form
+  @extend .login-form
+  & select#role
+    width: 100%
+    border-radius: 15px
+    background-color: #fff
+    border: 1px solid $steel
+    font-size: 12px
+    line-height: 12px
+    color: $steel
+    padding: 4px 11px
+  #recruiter-inputs
+    display: none

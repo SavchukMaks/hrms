@@ -1,0 +1,112 @@
+@import "../../vars"
+@import "../base/sidebar/sidebar"
+@import "../base/main/main"
+@import "../base/pagination"
+@import "../add-vacancies/add-vacancies-sidebar"
+@import "../vacancies-page/vacancies-content"
+@import "../vacancies-page/vacancies-list"
+@import "welcome-message"
+@import "test-tasks"
+@import "../vacancies-page/vacancies-footer"
+@import "../base/popup"
+@import "../../_mixins/switcher"
+
+.popup-candidate-list, .popup-customer-list, .update-btn
+  width: 100%
+  & ul
+    padding: 0
+    margin: 0
+    & li
+      list-style: none
+      width: 100%
+      &:last-child
+        box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.1)
+      &.add-candidate-row button
+        background-color: #55cda1
+        color: #FFF
+        width: 100%
+        border: none
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 15px 0
+        & p
+          margin-left: 15px
+          display: inline-flex
+          margin-bottom: 0
+        &:hover
+          cursor: pointer
+          background-color: darken(#55cda1, 5%)
+          text-decoration: none
+      & .popup-candidate-item
+        & input[type=checkbox]
+          display: none
+          &:checked
+            ~ label
+              background-color: #dbe4ef
+              > span:before
+                content: '\f00c'
+                font-family: FontAwesome
+                color: $warm-grey
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                font-size: 14px
+        & label
+          display: flex
+          width: 100%
+          align-items: center
+          padding: 9px 25px
+          background-color: $background-color
+          border-bottom: 1px solid #E8E8E8
+          margin-bottom: 0
+          &:hover
+            cursor: pointer
+          > span
+            width: 19px
+            height: 19px
+            border: 1px solid $warm-grey
+            border-radius: 2px
+            background-color: #fff
+            margin-right: 29px
+            position: relative
+          & img
+            width: 47px
+            height: 47px
+            border-radius: 50%
+            border: solid 1px $warm-grey
+            margin-right: 30px
+          & .popup-candidate-info
+            & p
+              font-family: $medium
+              color: #7e807f
+              font-size: 16px
+              margin-bottom:  0
+            & span
+              font-size: 12px
+              color: #B8B8B8
+              display: -webkit-box
+
+.footer-popup
+  & button
+    width: 133px
+    padding: 5px 0
+    text-align: center
+    &:first-of-type
+      margin-right: 27px
+
+.col-md-6 #sortCandidate
+  width: 230px
+
+
+
+
+
+
+
+
+
+
+
+

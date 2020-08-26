@@ -1,0 +1,110 @@
+@import "../../vars"
+
+.popup-wrapper
+  position: fixed
+  display: none
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.popup
+  width: 875px
+  display: none
+  //min-height: 560px
+  border-radius: 15px
+  position: fixed
+  background-color: #fff
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1)
+  & .header-popup
+    background-color: #f3f9fd
+    border-radius: 15px 15px 0 0
+    padding: 24px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    & .title-popup
+      display: inline-block
+      & h3
+        margin: 0
+        font-family: $medium
+        font-size: 18px
+        color: #000
+        display: inline-block
+      & img
+        width: 45px
+        height: 45px
+        display: inline-block
+        margin-right: 10px
+        border-radius: 50%
+    & .close-popup
+      display: inline-block
+      float: right
+      font-size: 32px
+      line-height: 0.6
+      &:hover
+        cursor: pointer
+  & .functional-popup
+    display: flex
+    justify-content: space-between
+    padding: 16px 25px
+    background-color: #fff
+    & .switchers
+      display: flex
+      & .onoffswitch-switch
+        margin: 5px 5px 10px
+      > div
+        display: flex
+        align-items: center
+        margin-right: 29px
+        &:last-child
+          margin-right: 0
+      & .name-switch
+        margin-left:  15px
+        font-size: 12px
+        line-height: 2
+        letter-spacing: 0.2px
+        text-align: left
+        color: $greyish
+        &.active
+          color: $seafoam-blue
+  & .content-popup
+    padding: 45px 35px
+    & form
+      display: inline-block
+      width: 100%
+      margin-bottom: 31px
+      & textarea
+        width: 100%
+        background-color: #ffffff
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1)
+        border: solid 1px $steel
+        border-radius: 15px 15px 30px 15px
+        resize: none
+  & .search-popup
+    position: relative
+    & input
+      margin-right: 30px
+      width: 305px
+      border-radius: 15px
+      background-color: #ffffff
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2)
+      border: 0
+      font-size: 14px
+      line-height: 1.71
+      letter-spacing: 0.3px
+      text-align: left
+      color: $steel
+      padding-left: 30px
+    &:before
+      content: '\f002'
+      font-family: FontAwesome
+      position: absolute
+      left: 10px
+      top: 2px
+      color: $steel
+  & .footer-popup
+    display: inline-block

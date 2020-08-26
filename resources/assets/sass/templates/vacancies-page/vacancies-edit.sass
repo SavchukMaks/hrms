@@ -1,0 +1,58 @@
+@import "../../vars"
+@import "../base/sidebar/sidebar"
+@import "../base/main/main"
+@import "../base/pagination"
+@import "../add-vacancies/add-vacancies-sidebar"
+
+.edit-vacancy
+  margin-top: 42px
+  & .tags
+    min-height: 95px
+    margin-bottom: 15px
+    & input
+      border: none
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1)
+  & .edit-block
+    width: 100%
+    padding: 15px 30px 15px 60px
+    border-radius: 5px
+    background-color: #ffffff
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
+    margin-bottom: 15px
+    & p
+      font-family: $default-font
+      font-size: 12px
+      line-height: 24px
+      color: #000
+      margin-bottom: 13px
+    & textarea
+      border: none
+      resize: none
+      font-family: $default-font
+      font-size: 14px
+      color: $warm-grey
+      width: 100%
+    & a
+      font-family: $medium
+      font-size: 14px
+      color: #7e807f
+    & .control-group.form-group
+      width: 100%
+      & .editable-input
+        width: calc(100% - 78px)
+        display: inline-block
+        float: left
+      & .editable-buttons
+        display: inline-block
+        width: 73px
+        float: right
+        & button:first-of-type
+          margin-right: 5px
+      & .my-editable
+        border: none
+        width: 100%
+        outline: none
+        padding-right: 0
+        display: inline-block
+        &:focus, &:active, &:hover
+          outline: none
